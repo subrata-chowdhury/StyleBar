@@ -1,0 +1,68 @@
+.heading-container {
+    padding-left: 5%;
+    padding-top: 8.5%;
+    padding-bottom: 5%;
+    display: grid;
+    align-items: start;
+    justify-content: start;
+    gap: 70px;
+}
+
+.heading-container .heading {
+    color: #fff;
+    font-size: 66px;
+    font-family: Brutal_Light, "Open Sans", arial;
+}
+
+.heading-container .learn-more-btn {
+    display: grid;
+    align-items: start;
+    justify-content: start;
+}
+.heading-container .learn-more-btn div {
+    padding: 14px 24px;
+    border: 2px solid;
+    border-image: radial-gradient(100% 185.14% at 100% 100%, rgb(52, 195, 255) 0%, rgb(10, 104, 205) 100%) 5 / 2px / 0 stretch;
+    background: transparent;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 1.5px;
+    transition: 0.5s;
+    font-family: Brutal_Light, "Open Sans", arial;
+}
+
+.heading-container .learn-more-btn div:hover {
+    box-shadow: 0px 0px 18px rgb(0, 171, 245);
+    background: dodgerblue;
+}
+
+.line-animation-wrapper {
+    overflow: hidden;
+    height: 80px;
+}
+
+.line-animation-wrapper .line-animation{
+    width: 2px;
+    height: 100%;
+    background: rgba(255,255,255,0.7);
+    position: relative;
+    top: -100%;
+    animation: topToDown 1.5s linear infinite;
+}
+
+@keyframes topToDown {
+    0%{
+        top: -100%;
+    }
+
+    100%{
+        top: 100%;
+    }
+}
+
+@media (max-width: 1270px) {
+    .heading-container .heading {
+        font-size: 30px;
+    }
+}

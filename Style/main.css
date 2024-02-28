@@ -31,3 +31,10 @@ body {
     height: 32px;
     cursor: pointer;
 }
+
+@media (max-width: 960px) {
+    /* 
+    .bg{
+        display: none;
+    } */
+}

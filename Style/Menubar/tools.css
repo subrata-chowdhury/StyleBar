@@ -125,12 +125,9 @@
     display: block;
 }
 
-.download-btn {
-    padding: 7px 10px;
-    background: #26bbff;
-    font-family: Brutal_Light, "Open Sans", arial;
-    border-radius: 7px;
-    cursor: pointer;
-    font-size: 16px;
-    letter-spacing: 0.5px;
+
+.tools .cross-for-close-menu {
+    display: none;
 }
+
+@media (max-width: 1270px) {}

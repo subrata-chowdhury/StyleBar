@@ -4,7 +4,7 @@
     display: grid;
     align-items: center;
     justify-content: stretch;
-    grid-template-columns: 10% 50% 40%;
+    grid-template-columns: 10% 50% 32% 8%;
     padding: 0 1.5rem;
 }
 
@@ -58,4 +58,81 @@
 
 .logo-container.for-mobile .logo.icon {
     width: 233px;
+}
+
+
+.download-btn {
+    padding: 7px 10px;
+    background: #26bbff;
+    font-family: Brutal_Light, "Open Sans", arial;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    margin-left: 1.5rem;
+    text-align: center;
+}
+
+@media (max-width: 1440px) {
+    .menubar-container {
+        grid-template-columns: 30% 30% 30% 10%;
+    }
+}
+
+@media (max-width: 1270px) {
+
+
+    .menubar-container {
+        grid-template-columns: none;
+        grid-template-areas:
+            "logo logo logo menutogglericons";
+    }
+
+    .menubar-container.active {
+
+        grid-template-areas:
+            "logo logo logo menutogglericons"
+            "tools tools tools tools"
+            "meanus meanus meanus meanus"
+            "download download download download";
+        justify-content: center;
+        height: 100vh;
+        gap: 0;
+        position: fixed;
+        width: 100%;
+        padding: 0;
+    }
+
+    .menubar-container .tools,
+    .menubar-container .menus-container,
+    .menubar-container .download-btn {
+        display: none;
+    }
+
+    .menubar-container.active .tools,
+    .menubar-container.active .menus-container,
+    .menubar-container.active .download-btn {
+        display: grid;
+    }
+
+    .menubar-container .download-btn {
+        grid-area: download;
+        padding: 15px 18px;
+        max-width: 200px;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
+        margin-left: none;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .menubar-container .logo-container.for-mobile {
+        display: none;
+    }
+
+    .menubar-container .logo-container.for-pc {
+        display: block;
+    }
 }

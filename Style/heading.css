@@ -79,6 +79,36 @@
 
 @media (max-width: 1270px) {
     .heading-container .heading {
+        line-height: 38px;
         font-size: 30px;
+    }
+}
+
+@media (max-width: 960px) {
+
+    .heading-container {
+        padding: auto 0;
+        justify-content: center;
+    }
+
+    .heading-container .heading {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .heading-container .learn-more-btn {
+        justify-content: center;
+    }
+
+    .heading-container .line-animation-wrapper {
+        display: grid;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .heading-container .heading {
+        line-height: 28px;
+        font-size: 20px;
     }
 }

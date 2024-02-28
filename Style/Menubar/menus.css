@@ -26,6 +26,18 @@
     display: none;
 }
 
+.menu .menu-arrow {
+    display: none;
+    transform: rotate(-90deg);
+}
+
+.menu-toggler-icons-container {
+    display: none;
+}
+
+.cross-for-close-menu {
+    display: none;
+}
 
 @media (max-width: 1440px) {
 
@@ -39,22 +51,68 @@
     .menu:nth-child(5) {
         display: block;
     }
-
-    .menubar-container {
-        grid-template-columns: 30% 30% 40%;
-    }
-
-    .menubar-container .logo-container.for-pc {
-        display: none;
-    }
-
-    .menubar-container .logo-container.for-mobile {
-        display: grid;
-    }
 }
 
 @media (max-width: 1270px) {
+    .three-line-menu.active {
+        display: block;
+    }
+
+    .cross-for-close-menu.active {
+        display: block;
+    }
+
     .menu {
+        display: grid;
+    }
+
+    .logos-container {
+        grid-area: logo;
+    }
+
+    .tools {
+        display: grid;
+        grid-area: tools;
+        justify-content: space-between !important;
+    }
+
+    .tools .line-seperator {
+        display: none;
+    }
+
+    .menus-container {
+        grid-auto-flow: row;
+        grid-area: meanus;
+        justify-content: center;
+        row-gap: 1rem;
+    }
+
+    .menus-container .menu {
+        width: 85vw;
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+        padding: 1rem;
+        background: rgba(255, 255, 255, 0.05);
+        color: #fff;
+    }
+
+    .menus-container .menu:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .menu .menu-arrow {
+        width: 20px;
+        height: 20px;
+    }
+
+    .menu-toggler-icons-container {
+        display: grid;
+        grid-area: menutogglericons;
+        justify-content: end;
+    }
+
+    .menu:nth-child(5) {
         display: none;
     }
 
@@ -62,20 +120,8 @@
         display: none;
     }
 
-    .tools div {
-        display: none;
-    }
-
-    .tools .three-line-menu {
+    .menu .menu-arrow {
         display: block;
     }
 
-    .menubar-container {
-        grid-template-columns: auto auto !important;
-        justify-content: space-between;
-    }
-
-    .menubar-container .menus-container {
-        display: none;
-    }
 }

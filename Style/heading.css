@@ -6,6 +6,9 @@
     align-items: start;
     justify-content: start;
     gap: 70px;
+    animation: top-to-bottom 1s linear;
+    position: relative;
+    z-index: -1;
 }
 
 .heading-container .heading {
@@ -14,11 +17,24 @@
     font-family: Brutal_Light, "Open Sans", arial;
 }
 
+@keyframes top-to-bottom {
+    0% {
+        top: -30px;
+        opacity: 0;
+    }
+
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}
+
 .heading-container .learn-more-btn {
     display: grid;
     align-items: start;
     justify-content: start;
 }
+
 .heading-container .learn-more-btn div {
     padding: 14px 24px;
     border: 2px solid;
@@ -42,21 +58,21 @@
     height: 80px;
 }
 
-.line-animation-wrapper .line-animation{
+.line-animation-wrapper .line-animation {
     width: 2px;
     height: 100%;
-    background: rgba(255,255,255,0.7);
+    background: rgba(255, 255, 255, 0.7);
     position: relative;
     top: -100%;
     animation: topToDown 1.5s linear infinite;
 }
 
 @keyframes topToDown {
-    0%{
+    0% {
         top: -100%;
     }
 
-    100%{
+    100% {
         top: 100%;
     }
 }

@@ -94,14 +94,35 @@
     border-radius: 7px;
 }
 
-.language-container div {
-    padding: 6px 8px;
+.language-container .language {
+    padding: 8px 10px;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 15px;
 }
 
-.language-container div:hover {
+.language-container .language:hover {
     background: rgba(255, 255, 255, 0.2);
+}
+
+.language-container .language.active:hover {
+    background: transparent;
+}
+
+.language {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+}
+
+.language img {
+    display: none;
+    width: 20px;
+    height: 20px;
+}
+
+.language.active img {
+    display: block;
 }
 
 .download-btn {

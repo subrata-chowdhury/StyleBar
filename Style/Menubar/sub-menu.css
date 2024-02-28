@@ -5,7 +5,7 @@
     background: transparent;
 }
 
-.menu.more-menu .sub-menu-container-wrapper{
+.menu.more-menu .sub-menu-container-wrapper {
     left: 50%;
 }
 
@@ -27,7 +27,10 @@
     display: none;
     grid-template-rows: auto auto auto auto;
     grid-template-columns: none;
-    width: 15rem;
+    width: 17.2rem;
+    padding: 0;
+    gap: 0;
+    justify-content: stretch;
 }
 
 .menu:hover .sub-menu-container {
@@ -61,4 +64,85 @@
     color: #aaaaae;
     line-height: 17px;
     font-size: 12px;
+}
+
+
+
+/*------------------More Menu------------------*/
+
+
+
+.menu.more-menu .sub-menu:nth-child(1) {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.menu.more-menu .sub-menu:last-child {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.menu.more-menu .sub-menu {
+    padding: 1.6rem;
+}
+
+.sub-menu-text-and-arrow-icon-container {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    color: #aaaaae;
+}
+
+.menu.more-menu .sub-menu:hover {
+    background: #000;
+}
+
+.menu.more-menu .sub-menu-container-wrapper:hover .sub-menu {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.menu.more-menu .sub-menu:hover .sub-menu-text-and-arrow-icon-container {
+    color: #fff;
+}
+
+.sub-menu-text-and-arrow-icon-container .sub-menu-arrow.icon {
+    width: 22px;
+    height: 22px;
+}
+
+.sub-menu .sub-menu-arrow {
+    transform: rotate(-90deg);
+}
+
+.menu.more-menu .sub-menu .sub-menu-container-wrapper {
+    display: none;
+    position: absolute;
+    top: -2.2rem;
+    left: 90%;
+    padding-left: 10%;
+}
+
+.menu.more-menu .sub-menu .sub-menu-container-wrapper .link {
+    position: relative;
+    left: -10px;
+}
+
+.menu.more-menu .sub-menu .sub-menu-container-wrapper .line-seperator {
+    width: 100%;
+    height: 2px;
+}
+
+.menu.more-menu .sub-menu:hover .sub-menu-container-wrapper {
+    display: grid;
+}
+
+.menu.more-menu .sub-menu .sub-menu-container {
+    display: grid;
+    grid-template-rows: auto auto 2px auto;
+    gap: 20px;
+    padding: 2rem;
+    border-top-left-radius: 0px;
+    box-shadow: none;
 }

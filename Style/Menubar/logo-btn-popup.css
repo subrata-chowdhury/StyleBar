@@ -1,0 +1,64 @@
+.logo-btn-popup {
+    display: none;
+    grid-template-columns: auto auto;
+    background: #202024;
+    position: absolute;
+    left: 1rem;
+    top: 5.5rem;
+    border-radius: 10px;
+    padding: 40px;
+    width: 33rem;
+    max-width: 35rem;
+    gap: 45px;
+    z-index: 2;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.logo-btn-popup.active {
+    display: grid;
+}
+
+.logo-btn-popup .heading {
+    font-size: 22px;
+    font-family: Brutal_Light, "Open Sans", arial;
+    color: #e6e6ea;
+    font-weight: bold;
+    padding-bottom: 12px;
+    padding-left: 10px;
+}
+
+.logo-btn-popup .left-side {
+    display: grid;
+    gap: 40px;
+}
+
+.play-container,
+.discover-container,
+.create-container {
+    display: grid;
+    grid-auto-flow: row;
+    justify-content: start;
+    align-items: start;
+}
+
+.game-link {
+    font-family: Brutal_Light, "Open Sans", arial;
+    color: #e6e6ea;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    gap: 15px;
+    border-radius: 8px;
+    padding: 8px 10px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.game-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.game-link .icon {
+    width: 20px;
+    height: 20px;
+}

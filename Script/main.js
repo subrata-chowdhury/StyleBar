@@ -1,31 +1,43 @@
 const epicGameBtnCon = document.querySelector(".epic-games-btn-container");
 const logoBtnPopup = document.querySelector(".logo-btn-popup");
 
-epicGameBtnCon.addEventListener("click",()=>{
-    if(document.querySelector(".epic-games-btn-container.active")) {
+epicGameBtnCon.addEventListener("click", () => {
+    if (document.querySelector(".epic-games-btn-container.active")) {
         try {
             epicGameBtnCon.classList.remove("active");
             logoBtnPopup.classList.remove("active");
         } catch (error) {
-            
+
         }
     } else {
-        try{
+        try {
             epicGameBtnCon.classList.add("active");
             logoBtnPopup.classList.add("active");
-        } catch(err){
+        } catch (err) {
 
         }
     }
 })
 
-document.querySelector(".menu").addEventListener("mousemove",()=>{
-    try{
+document.querySelector(".menu").addEventListener("mousemove", () => {
+    try {
         epicGameBtnCon.classList.remove("active");
         logoBtnPopup.classList.remove("active");
-    }catch(err){
+    } catch (err) {
 
     }
+})
+
+document.querySelector(".search-container .search-icon").addEventListener("click", () => {
+    try {
+        document.querySelector(".search-container").classList.add("active");
+    } catch (err) { }
+})
+
+document.querySelector(".search-container .cross-icon").addEventListener("click", () => {
+    try {
+        document.querySelector(".search-container").classList.remove("active");
+    } catch (err) { }
 })
 
 // window.addEventListener("resize",()=>{

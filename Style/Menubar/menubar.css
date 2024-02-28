@@ -1,0 +1,61 @@
+.menubar-container {
+    background: #18181c;
+    height: 4.5rem;
+    display: grid;
+    align-items: center;
+    justify-content: stretch;
+    grid-template-columns: 10% 50% 40%;
+    padding: 0 1.5rem;
+}
+
+.epic-games-btn-container {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    max-width: 60px;
+}
+
+.epic-games-btn-container .arrow.icon {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 0px;
+    transition: 0.3s;
+}
+
+.epic-games-btn-container .arrow.icon:hover {
+    top: 5px;
+}
+
+.epic-games-btn-container.active .arrow.icon {
+    transform: rotate(180deg);
+}
+
+.line-seperator {
+    width: 1.5px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 1px;
+}
+
+.logos-container {
+    display: grid;
+    justify-content: start;
+    grid-template-columns: 60px 2px auto;
+    gap: 1.25rem
+}
+
+.logo-container {
+    display: grid;
+    justify-content: center;
+}
+
+.logo-container.for-mobile {
+    display: none;
+}
+
+.logo-container.for-mobile .logo.icon {
+    width: 233px;
+}

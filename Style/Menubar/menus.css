@@ -1,0 +1,80 @@
+.menus-container {
+    font-size: 15px;
+    color: #fff;
+    display: grid;
+    align-items: center;
+    justify-content: start;
+    grid-auto-flow: column;
+}
+
+.menu {
+    font-family: Brutal_Light, "Open Sans", arial;
+    padding: 8px 12px;
+    border-radius: 7px;
+    color: #aaaaae;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+}
+
+.menu:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.menu.more-menu {
+    display: none;
+}
+
+
+@media (max-width: 1440px) {
+
+    .menu:nth-child(3),
+    .menu:nth-child(6),
+    .menu:nth-child(7),
+    .menu:nth-child(8) {
+        display: none;
+    }
+
+    .menu:nth-child(5) {
+        display: block;
+    }
+
+    .menubar-container {
+        grid-template-columns: 30% 30% 40%;
+    }
+
+    .menubar-container .logo-container.for-pc {
+        display: none;
+    }
+
+    .menubar-container .logo-container.for-mobile {
+        display: grid;
+    }
+}
+
+@media (max-width: 1270px) {
+    .menu {
+        display: none;
+    }
+
+    .menu.more-menu {
+        display: none;
+    }
+
+    .tools div {
+        display: none;
+    }
+
+    .tools .three-line-menu {
+        display: block;
+    }
+
+    .menubar-container {
+        grid-template-columns: auto auto !important;
+        justify-content: space-between;
+    }
+
+    .menubar-container .menus-container {
+        display: none;
+    }
+}

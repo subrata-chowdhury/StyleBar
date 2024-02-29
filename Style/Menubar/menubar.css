@@ -73,6 +73,8 @@
     text-align: center;
 }
 
+
+
 @media (max-width: 1440px) {
     .menubar-container {
         grid-template-columns: 30% 30% 30% 10%;
@@ -81,6 +83,17 @@
 
 @media (max-width: 1270px) {
 
+    .menubar-container.active .epic-games-btn-container{
+        display: none;
+    }
+
+    .menubar-container.active .logos-container .line-seperator{
+        display: none;
+    }
+
+    .menubar-container.active .logos-container{
+        grid-template-columns: auto;
+    }
 
     .menubar-container {
         grid-template-columns: none;

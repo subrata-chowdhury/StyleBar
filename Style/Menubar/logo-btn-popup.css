@@ -74,3 +74,13 @@
         display: grid;
     }
 }
+
+@media (max-width: 770px) {
+    .logo-btn-popup{
+        grid-template-columns: none;
+        grid-auto-flow: row;
+        width: 90%;
+        left: 50%;
+        transform: translate(-50%,0);
+    }
+}

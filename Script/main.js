@@ -64,13 +64,28 @@ function menubarTogglerForMobile() {
             closeMenuBarBtn.classList.add("active");
             threeLineMenu.classList.remove("active");
         } catch (error) { }
+
+        // Closeing epicGamePopUp when menu icon is clicked
+        const epicGameBtnCon = document.querySelector(".epic-games-btn-container");
+        const logoBtnPopup = document.querySelector(".logo-btn-popup");
+        try {
+            epicGameBtnCon.classList.remove("active");
+            logoBtnPopup.classList.remove("active");
+        } catch (err) { }
     })
 }
 menubarTogglerForMobile();
 
 document.querySelectorAll(".menu").forEach((e) => {
     e.addEventListener("click", (event) => {
-        if(window.innerWidth > 1270) return;
+        if (window.innerWidth > 1270) return;
+
+        let targetElemClassName = event.target.classList;
+        if (targetElemClassName == "back-btn-container" || targetElemClassName == "back-btn-text" || targetElemClassName == "back-btn-arrow") {
+            document.querySelector(".menu.active").classList.remove("active");
+            return;
+        }
+        
         try {
             document.querySelector(".menu.active").classList.remove("active");
         } catch (err) { }
